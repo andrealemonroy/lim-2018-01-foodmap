@@ -1,0 +1,24 @@
+·splashBody{
+    background-color:#000000;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.splash{
+    width:400px;
+    height:70px;
+    margin: 150px auto 50px auto;
+    font-size: 50 px;
+    text-align:center;
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+}
+iframe{
+    margin-left: 3%;
+    margin-top: 3%;
+    height: 50%;
+}
+.card{
+    padding:10%;
+}

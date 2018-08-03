@@ -1,0 +1,92 @@
+[{
+        "name": "Veggie Pizza",
+        "address": "Jr. Colina 112, Barranco",
+        "type":"Vegetariana/Vegana"
+
+    },
+    {
+
+        "name": "La Cuadra de Salvador",
+        "address": "Jr. Centenario 105, Barranco",
+        "type": "Carnes y parrillas"
+    },
+    {
+
+        "name": "Arlotia",
+        "address": "Av. Grau 340, Barranco",
+        "type": "Fusión"
+    },
+    {
+
+        "name": "Cala",
+        "address": "Circuito vial Costa Verde , Espigón B, Barranco",
+        "type":"Criolla"
+    },
+    {
+
+        "name": "La Cabrera",
+        "address": "Av Miguel Grau 1502, Barranco",
+        "type":"Carnes y parrillas"
+    },
+    {
+
+        "name": "Segundo Muelle",
+        "address": "Av. Costa Verde s/n, Playa de las Cascadas, Barranco",
+        "type":"Marina"
+    },
+    {
+
+        "name": "Las Vecinas",
+        "address": "Jirón Domeyer 219, Barranco",
+        "type":"Vegetariana/Vegana"
+    }, {
+
+        "name": "Germinando Vida",
+        "address": "Av. Grau 209 A, Barranco",
+        "type": "Vegana"
+    }, {
+
+        "name": "Expreso Virgen de Guadalupe Cafe Cultural",
+        "address": "Prolongación San Martin, 015 -A, Barranco",
+        "type":"Vegetariana/Vegana"
+    }, {
+
+        "name": "La Calandria",
+        "address": "Calle 28 de Julio 206-C, Barranco",
+        "type":"Vegetariana/Vegana"
+    }, {
+
+        "name": "Hosso",
+        "address": "Malecon Castilla, Pedro de Osma 111, Barranco",
+        "type":"Japonesa"
+    }, {
+
+        "name": "Toshi Nikkei",
+        "address": "Armendariz 480, Barranco",
+        "type":"Japonesa"
+    }, {
+
+        "name": "Kinjo Ramen",
+        "address": "Av. Almirante Grau 680, Barranco",
+        "type": "Japonesa"
+    }, {
+
+        "name": "Pan Sal aire",
+        "address": "Av. Almirante Grau 320, Barranco",
+        "type":"Fusión"
+    }, {
+
+        "name": "Restaurante Las Mesitas",
+        "address": "Av Almirante Grau 341, Barranco",
+        "type":"Vegetariana/Vegana"
+    }, {
+
+        "name": "Canta Rana",
+        "address": "Genova 101, Barranco",
+        "type":"Marina"
+    }, {
+
+        "name": "Antica Trattoria",
+        "address": "Av. San Martin 15063, Barranco",
+        "type":"Italiana"
+    }]
