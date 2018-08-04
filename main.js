@@ -47,52 +47,43 @@ window.order = (arrayFilter) => {
         if (value == "Italiana") {
             if (arrayFilter[i].type == "Italiana") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="italiana">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
+
                 orderArray.push(print);
             }
         } else if (value == "Vegetariana/Vegana") {
             if (arrayFilter[i].type == "Vegetariana/Vegana") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="vegetariana">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
+
                 orderArray.push(print);
             }
         } else if (value == "Vegana") {
             if (arrayFilter[i].type == "Vegana") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="vegana">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
+
                 orderArray.push(print);
             }
         } else if (value == "Japonesa") {
             if (arrayFilter[i].type == "Japonesa") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="japonesa">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
                 orderArray.push(print);
             }
         } else if (value == "Fusión") {
             if (arrayFilter[i].type == "Fusión") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="fusion">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
                 orderArray.push(print);
             }
         } else if (value == "Marina") {
             if (arrayFilter[i].type == "Marina") {
                 print += '<a href="#" data-target="#exampleModal"  data-toggle="modal"  class="card w-75 mt-3" id="marina">' + arrayFilter[i].name + '</a>';
-                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
                 orderArray.push(print);
             }
         } else if (value == "Criolla") {
             if (arrayFilter[i].type == "Criolla") {
-                print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3 id="criolla">' + arrayFilter[i].name + '</a>';
-                                document.getElementById("exampleModalLabel").innerHTML=arrayFilter[i].name;
-                document.getElementById("body").innerHTML=arrayFilter[i].address;
+                print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="criolla">' + arrayFilter[i].name + '</a>';
                 orderArray.push(print);
             }
+        } else {
+            print += '<a href="#" data-target="#exampleModal"  data-toggle="modal" class="card w-75 mt-3" id="criolla">' + arrayFilter[i].name + '</a>';
         }
         i++;
     }
@@ -102,11 +93,44 @@ window.order = (arrayFilter) => {
 
 }
 
-// window.modal = (orderArray) => {
-//     let i = 0
-//     lengthArray = orderArray.length;
-//     while (i < lengthArray) {
-//         let optionModal = orderArray[i];
+document.getElementById('order').addEventListener('click', function (event) {
+    getData('../restaurantes.json', (err, dataRestaurants) => {
+        if (event.target.classList.contains('card')) {
+            count = dataRestaurants.length
+            array = []
+            let i = 0;
+            while (i < count) {
+                var card = event.target;
+                var title = card.textContent
+                document.getElementById("exampleModalLabel").innerHTML = title;
+                let name = dataRestaurants[i].name;
+                if (title == name) {
+                    document.getElementById("body").innerHTML = "Se encuentra en :"+ "<br>" + dataRestaurants[i].address;
+                }
+                i++
+            }
 
+        }
+    })
+});
 
-// }
+document.getElementById('restaurants').addEventListener('click', function (event) {
+    getData('../restaurantes.json', (err, dataRestaurants) => {
+        if (event.target.classList.contains('card')) {
+            count = dataRestaurants.length
+            array = []
+            let i = 0;
+            while (i < count) {
+                var card = event.target;
+                var title = card.textContent
+                document.getElementById("exampleModalLabel").innerHTML = title;
+                let name = dataRestaurants[i].name;
+                if (title == name) {
+                    document.getElementById("body").innerHTML = dataRestaurants[i].address;
+                }
+                i++
+            }
+
+        }
+    })
+});

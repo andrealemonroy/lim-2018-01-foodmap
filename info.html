@@ -31,20 +31,9 @@
             </div>
         </div>
     </div>
-    
 
-    <input id="buttonStart" type="button" value="->">
-    <input type="text" id="textSearch">
 
-    <select id="selectRestaurants">
-        <option>Italiana</option>
-        <option>Vegetariana/Vegana</option>
-        <option>Vegana</option>
-        <option>Japonesa</option>
-        <option>Criolla</option>
-        <option>Fusión</option>
-        <option>Marina</option>
-    </select>
+    <!--googlemap-->
     <div style="width: 100%">
         <iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Barranco+(Mapa)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
@@ -52,7 +41,31 @@
             <a href="https://www.mapsdirections.info/">Mapa España</a>
         </iframe>
     </div>
-    <br />
+
+
+
+
+    <div class="input-group mb-3">
+        <input type="text" id="textSearch" class="form-control" placeholder="Busca aquí el restaurante" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <select class="custom-select" id="selectRestaurants">
+                <option>Elige aquí</option>
+                <option>Italiana</option>
+                <option>Vegetariana/Vegana</option>
+                <option>Vegana</option>
+                <option>Japonesa</option>
+                <option>Criolla</option>
+                <option>Fusión</option>
+                <option>Marina</option>
+            </select>
+        </div>
+        <div class="input-group-append">
+            <button id="buttonStart" class="btn btn-outline-secondary" type="button">-></button>
+        </div>
+    </div>
+
+
 
     <div id="restaurants"></div>
     <div id="order"></div>

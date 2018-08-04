@@ -20,3 +20,7 @@ document.getElementById('buttonStart').addEventListener('click', () => {
 document.getElementById('textSearch').addEventListener('keyup', () => {
     document.getElementById("buttonStart").click();
 });
+
+window.onload = () => {
+    document.getElementById("buttonStart").click();
+}
