@@ -11,7 +11,7 @@ const getData = (url, callback) => {
 }
 
 document.getElementById('buttonStart').addEventListener('click', () => {
-    getData('../restaurantes.json', (err, dataRestaurants) => {
+    getData('restaurantes.json', (err, dataRestaurants) => {
         let filter = document.getElementById('textSearch').value.toUpperCase();
         order(filterRestaurants(dataRestaurants, filter));
     });

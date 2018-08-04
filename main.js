@@ -94,7 +94,7 @@ window.order = (arrayFilter) => {
 }
 
 document.getElementById('order').addEventListener('click', function (event) {
-    getData('../restaurantes.json', (err, dataRestaurants) => {
+    getData('restaurantes.json', (err, dataRestaurants) => {
         if (event.target.classList.contains('card')) {
             count = dataRestaurants.length
             array = []
@@ -115,7 +115,7 @@ document.getElementById('order').addEventListener('click', function (event) {
 });
 
 document.getElementById('restaurants').addEventListener('click', function (event) {
-    getData('../restaurantes.json', (err, dataRestaurants) => {
+    getData('restaurantes.json', (err, dataRestaurants) => {
         if (event.target.classList.contains('card')) {
             count = dataRestaurants.length
             array = []
